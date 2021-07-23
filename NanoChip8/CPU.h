@@ -3,7 +3,7 @@
 #include <vector>
 
 /****************************/
-//		Chip8 Spec impl (attempt)
+//Chip8 Spec impl (attempt)
 /****************************/
 class CPU {
 public:
