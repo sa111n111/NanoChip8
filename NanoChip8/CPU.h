@@ -72,4 +72,9 @@ public:
 	//	This increments the stack pointer, then puts the program counter on top of the stack.
 	// 	the program counter is then set to nnn	
 	void __2nnn();
+
+
+
+	// a hard reset
+	void hardReset();
 };

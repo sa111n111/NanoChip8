@@ -1,5 +1,7 @@
 #include "CPU.h"
 
+
+
 void CPU::__00E0()
 {
 	memset(displayMemory, 0, sizeof(displayMemory)); // simply zero out the entire buffer.
@@ -25,4 +27,16 @@ void CPU::__2nnn()
 	program_counter = address;
 }
 
+void CPU::hardReset()
+{
+	//clear cpu memory
+	for (int i = 0; i < std::size(this->cpuMemory); i++) {
+		this->cpuMemory[i] = 0;
+	}
+
+	// clear stack memory
+	for (int i = 0; i < std::size(this->stack); i++) {
+		this->stack[i] = 0;
+	}
+}
 
