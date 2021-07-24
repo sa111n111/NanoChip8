@@ -1,9 +1,20 @@
 #include "CPU.h"
 
-void CPU::clear()
+void CPU::__00E0()
 {
-	memset(this->stack, 0, sizeof(this->stack)); //zero out stack memory
-	this->program_counter = 0x200;
-	this->curr_op = 0x200;
-	this->stack_ptr &= 0; // clear stackpointer bits
+	memset(displayMemory, 0, sizeof(displayMemory)); // simply zero out the entire buffer.
 }
+
+void CPU::__00EE()
+{
+	--stack_ptr;
+	program_counter = stack[stack_ptr];
+}
+
+void CPU::__2nnn()	/* todo */
+{
+	
+
+}
+
+
