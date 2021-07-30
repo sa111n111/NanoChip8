@@ -9,13 +9,13 @@
 /****************************/
 class CPU {
 public:
-	uint8_t  cpuMemory[4096];			/* alloc 4kb of cpu memory */
-	uint8_t  registers[16];				/* 8 bit registers */
-	uint8_t  stack_ptr;	 			    /* The stack pointer. Can be 8 bit. */
-	uint16_t stack[16];					/* the stack itself */
-	uint16_t program_counter;		    /* The program counter, should be 16-bit.*/
+	uint8_t  cpuMemory[4096];		/* alloc 4kb of cpu memory */
+	uint8_t  registers[16];			/* 8 bit registers */
+	uint8_t  stack_ptr;	 		/* The stack pointer. Can be 8 bit. */
+	uint16_t stack[16];			/* the stack itself */
+	uint16_t program_counter;		/* The program counter, should be 16-bit.*/
 	uint16_t displayMemory[64 * 64];	/* The display buffer. We are going 64 x 64 (ETI 660) rather than the standard (which is 64 x 32) */
-	uint16_t opcode;					/* The 16 bit opcode */
+	uint16_t opcode;			/* The 16 bit opcode */
 
 
 	CPU() {
